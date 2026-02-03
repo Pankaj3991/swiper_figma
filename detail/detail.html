@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .bullet-outer {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #000;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bullet-inner {
+            width: 6px;
+            height: 6px;
+            background: #000;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="w-full sticky top-0 z-50 bg-white">
+        <div class="relative">
+            <!-- small screen navbar -->
+            <div class="lg:hidden flex justify-between items-center shadow-md w-full px-4">
+                <div class="">
+                    <span class="material-symbols-outlined" style="font-size: 30px;" id="nav1">
+                        menu
+                    </span>
+                </div>
+
+                <div class="">
+                    <img src="./images/logo.PNG" alt="Logo" class="w-auto h-16 object-contain">
+                </div>
+
+                <div class="flex gap-8">
+                    <i class="block fa-regular fa-user text-[24px]"></i>
+                    <i class="block fa-solid fa-ellipsis-vertical text-[24px]" id="nav2"></i>
+                </div>
+            </div>
+            <!-- nav1 mobile -->
+            <div class="bg-white w-full flex flex-col items-center gap-8 py-4 absolute -left-[150%] transition-all duration-300"
+                id="nav1Mobile">
+                <div class="rotate-45 text-5xl" id="cross1">+</div>
+                <div class="max-w-[300px] w-full border-1 py-[10px] pl-[13px] py-[10px] flex flex-col gap-2">
+                    <div class="gap-4 w-full h-full px-[10px] py-[10px] flex justify-center">
+                        <form action="" class="">
+                            <select name="catgories" id="categories"
+                                class="pr-[15.08px] leading-[21px] font-[700] font-[Quicksand] text-[14px]">
+                                <option selected disabled class="mr-8">All Categories</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="leading-[24px]">
+                        <form action="">
+                            <input type="text" class="pl-4 focus:outline-none border-b-1 placeholder:text-gray-400"
+                                placeholder="Search...">
+                            <i class="fa-solid fa-magnifying-glass text-[24px] leading-[24px] opacity-50"></i>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- All categories -->
+                <div
+                    class="max-w-[300px] max-h-[44px] w-full h-full border-1 px-[10px] py-[10px] flex justify-center items-center">
+                    <span class="material-symbols-outlined w-[24px] text-[24px] inline-block leading-[24px]">
+                        apps
+                    </span>
+                    <form action="" class="inline-block">
+                        <select name="catgories" id="categories"
+                            class="pr-[15.08px] leading-[21px] font-[700] font-[Quicksand] text-[14px]">
+                            <option selected disabled class="mr-8">All Categories</option>
+                            <option value="abc">abc</option>
+                            <option value="abc">abc</option>
+                            <option value="abc">abc</option>
+                            <option value="abc">abc</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="max-w-[300px] max-h-[24px] w-full h-full flex justify-between">
+                    <div class="flex">
+                        <div class="w-[28px] h-[24px] relative ">
+                            <div
+                                class="w-[16px] h-[16px] rounded-full bg-black text-white flex justify-center items-center absolute -top-2 right-0">
+                                1</div>
+                            <span class="material-symbols-outlined text-[24px] w-[24px] inline-block leading-[24px]">
+                                favorite
+                            </span>
+                        </div>
+                        <div class="font-[Quicksand] font-[400] text-[16px] leading-[24px]">WishList</div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-[28px] h-[24px] relative ">
+                            <div
+                                class="w-[16px] h-[16px] rounded-full bg-black text-white flex justify-center items-center absolute -top-2 right-0">
+                                1</div>
+                            <span class="material-symbols-outlined text-[24px] w-[24px] inline-block leading-[24px]">
+                                shopping_cart
+                            </span>
+                        </div>
+                        <div class="font-[Quicksand] font-[400] text-[16px] leading-[24px]">Cart</div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-[28px] h-[24px]">
+                            <i class="fa-regular fa-user text-[24px] w-[24px] inline-block leading-[24px]"></i>
+                        </div>
+                        <div class="font-[Quicksand] font-[400] text-[16px] leading-[24px]">Account</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- nav2 mobile -->
+            <div class="bg-white w-full flex flex-col items-center absolute -left-[150%] gap-8 py-4 transition-all duration-300"
+                id="nav2Mobile">
+                <div class="rotate-45 text-5xl" id="cross2">+</div>
+                <div class="max-w-[268.42px] max-h-[48px] w-full h-full">
+                    <div
+                        class="max-w-[300px] max-h-[48px] w-full h-full border-1 px-[10px] py-[10px] flex justify-center items-center bg-black text-white">
+                        <span class="material-symbols-outlined w-[24px] text-[24px] inline-block leading-[24px]">
+                            apps
+                        </span>
+                        <form action="" class="inline-block">
+                            <span class="font-[Quicksand] font-[700] text-[16px] leading-[24px]">Browse</span>
+                            <select name="catgories" id="categories"
+                                class="pr-[15.08px] leading-[21px] font-[700] font-[Quicksand] text-[14px]">
+                                <option selected disabled class="mr-8">All Categories</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <nav class="gap-4 flex-wrap max-w-[300px] max-h-[45px] w-full h-full flex justify-between items-center">
+                    <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Home</a>
+                    <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">About</a>
+                    <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Shop</a>
+                    <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Blog</a>
+                    <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Our Team</a>
+                    <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Contact</a>
+                </nav>
+                <div class="flex max-w-[300px] h-full flex-col">
+                    <div class="">
+                        <svg width="140" height="20" viewBox="0 0 140 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.0001 18.5713C9.26627 18.5713 5.42871 14.7338 5.42871 9.9999C5.42871 5.26603 9.26627 1.42847 14.0001 1.42847C18.734 1.42847 22.5715 5.26603 22.5715 9.9999C22.5715 14.7338 18.734 18.5713 14.0001 18.5713ZM14.0001 18.5713V8.28562C14.0001 7.33884 14.7676 6.57133 15.7144 6.57133H17.0001M11.0001 11.7142H17.0001"
+                                stroke="#939393" stroke-width="1.5" />
+                            <path
+                                d="M50.5447 2.71439L51.293 2.66477C51.2731 2.36392 51.0749 2.10426 50.79 2.00564C50.505 1.90702 50.1887 1.98862 49.9871 2.21278L50.5447 2.71439ZM50.0721 6.33754C50.0721 5.92332 49.7363 5.58754 49.3221 5.58754C48.9079 5.58754 48.5721 5.92332 48.5721 6.33754H50.0721ZM41.9997 7.42868V8.17868H42.7497V7.42868H41.9997ZM34.6509 2.71439L35.3533 2.4514C35.2486 2.1719 34.9882 1.98104 34.6902 1.96541C34.3921 1.94979 34.1132 2.11237 33.9799 2.37939L34.6509 2.71439ZM39.4283 13.8572L39.959 14.3872C40.1426 14.2033 40.2179 13.9376 40.1582 13.6848C40.0985 13.432 39.9122 13.2281 39.6658 13.1458L39.4283 13.8572ZM33.4283 16.1838V15.4338C33.0979 15.4338 32.8064 15.65 32.7105 15.9662C32.6147 16.2824 32.737 16.624 33.0118 16.8075L33.4283 16.1838ZM48.3867 3.90628L47.8304 4.4093L48.1006 4.70816L48.499 4.64783L48.3867 3.90628ZM49.7963 2.764C49.859 3.70949 49.7994 4.26567 49.6543 4.67473C49.5147 5.06811 49.2704 5.39861 48.8032 5.84634L49.841 6.92938C50.384 6.40902 50.8162 5.88596 51.068 5.17622C51.3142 4.48215 51.3607 3.68564 51.293 2.66477L49.7963 2.764ZM50.0721 7.22969V6.38786H48.5721V7.22969H50.0721ZM50.0721 6.38786V6.33754H48.5721V6.38786H50.0721ZM41.2497 6.57153V7.42868H42.7497V6.57153H41.2497ZM45.7045 1.96438C43.1987 1.96438 41.2497 4.13995 41.2497 6.57153H42.7497C42.7497 4.88993 44.1035 3.46439 45.7045 3.46439V1.96438ZM48.5721 7.22969C48.5721 12.4517 44.1836 16.9644 38.9997 16.9644V18.4644C45.0413 18.4644 50.0721 13.2506 50.0721 7.22969H48.5721ZM33.9485 2.97738C34.6374 4.81735 37.2031 8.17868 41.9997 8.17868V6.67868C37.9936 6.67868 35.8869 3.87673 35.3533 2.4514L33.9485 2.97738ZM33.9799 2.37939C32.6866 4.96989 32.4505 7.52848 33.3675 9.72295C34.2845 11.9174 36.2934 13.6014 39.1908 14.5686L39.6658 13.1458C37.0614 12.2764 35.4591 10.8379 34.7515 9.14461C34.0439 7.45131 34.17 5.35685 35.3219 3.04939L33.9799 2.37939ZM38.8975 13.3273C38.1893 14.0367 36.1201 15.4338 33.4283 15.4338V16.9338C36.605 16.9338 39.0372 15.3104 39.959 14.3872L38.8975 13.3273ZM48.943 3.40327C48.145 2.52076 46.9893 1.96438 45.7045 1.96438V3.46439C46.5473 3.46439 47.3045 3.82772 47.8304 4.4093L48.943 3.40327ZM48.499 4.64783C49.463 4.50183 50.4001 3.99645 51.1022 3.21599L49.9871 2.21278C49.5082 2.74515 48.8817 3.07277 48.2744 3.16474L48.499 4.64783ZM33.0118 16.8075C35.0081 18.1404 36.9311 18.4644 38.9997 18.4644V16.9644C37.1171 16.9644 35.5163 16.6761 33.8448 15.56L33.0118 16.8075Z"
+                                fill="#939393" />
+                            <path
+                                d="M74.7144 5.71419H75.5715M64.8573 1.42847H75.143C77.0365 1.42847 78.5715 2.9635 78.5715 4.85704V15.1428C78.5715 17.0363 77.0365 18.5713 75.143 18.5713H64.8573C62.9637 18.5713 61.4287 17.0363 61.4287 15.1428V4.85704C61.4287 2.9635 62.9637 1.42847 64.8573 1.42847ZM70.0001 13.4285C68.1066 13.4285 66.5716 11.8934 66.5716 9.9999C66.5716 8.10635 68.1066 6.57133 70.0001 6.57133C71.8936 6.57133 73.4287 8.10635 73.4287 9.9999C73.4287 11.8934 71.8936 13.4285 70.0001 13.4285Z"
+                                stroke="#939393" stroke-width="1.5" />
+                            <path
+                                d="M89.4287 14.5131V5.51346C89.4287 4.70203 89.9955 4.00086 90.789 3.83085C95.5425 2.81224 100.458 2.81224 105.211 3.83085C106.005 4.00086 106.572 4.70203 106.572 5.51346V14.5131C106.572 15.3776 105.961 16.1219 105.114 16.2915C100.418 17.2306 95.5825 17.2306 90.8866 16.2915C90.0389 16.1219 89.4287 15.3776 89.4287 14.5131Z"
+                                stroke="#939393" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M96.2852 12.5713V7.42847L100.571 9.9999L96.2852 12.5713Z" stroke="#939393"
+                                stroke-width="1.5" stroke-linejoin="round" />
+                            <path
+                                d="M119.143 15.1433L119.814 15.4787L120.021 15.0637L119.742 14.6928L119.143 15.1433ZM120.857 16.8573L121.307 16.2577L120.936 15.979L120.521 16.1865L120.857 16.8573ZM117.429 18.5713L116.758 18.2359C116.614 18.5247 116.67 18.8734 116.898 19.1017C117.127 19.3299 117.475 19.3865 117.764 19.2422L117.429 18.5713ZM122.572 6.57133L122.122 5.97133C121.933 6.11297 121.822 6.33526 121.822 6.57133H122.572ZM129.429 13.4285V14.1785C129.65 14.1785 129.86 14.0808 130.002 13.9116L129.429 13.4285ZM116.679 9.99989C116.679 12.0977 117.373 14.0357 118.543 15.5937L119.742 14.6928C118.76 13.3856 118.179 11.7617 118.179 9.99989H116.679ZM126 0.678467C120.852 0.678467 116.679 4.85181 116.679 9.99989H118.179C118.179 5.68024 121.681 2.17846 126 2.17846V0.678467ZM135.322 9.99989C135.322 4.85181 131.148 0.678467 126 0.678467V2.17846C130.32 2.17846 133.822 5.68024 133.822 9.99989H135.322ZM126 19.3213C131.148 19.3213 135.322 15.148 135.322 9.99989H133.822C133.822 14.3196 130.32 17.8213 126 17.8213V19.3213ZM120.406 17.4569C121.964 18.6274 123.902 19.3213 126 19.3213V17.8213C124.238 17.8213 122.615 17.2397 121.307 16.2577L120.406 17.4569ZM117.764 19.2422L121.192 17.5281L120.521 16.1865L117.093 17.9005L117.764 19.2422ZM118.472 14.8078L116.758 18.2359L118.1 18.9067L119.814 15.4787L118.472 14.8078ZM121.822 6.57133V7.42847H123.322V6.57133H121.822ZM128.572 14.1785H129.429V12.6785H128.572V14.1785ZM121.822 7.42847C121.822 11.1564 124.844 14.1785 128.572 14.1785V12.6785C125.672 12.6785 123.322 10.328 123.322 7.42847H121.822ZM123.022 7.17133L123.554 6.77182L122.654 5.57182L122.122 5.97133L123.022 7.17133ZM123.725 6.84425L123.918 8.39124L125.407 8.20518L125.213 6.6582L123.725 6.84425ZM123.888 8.48029L122.898 9.46957L123.959 10.5302L124.948 9.54095L123.888 8.48029ZM123.918 8.39124C123.922 8.42404 123.911 8.45691 123.888 8.48029L124.948 9.54095C125.299 9.19026 125.468 8.6973 125.407 8.20518L123.918 8.39124ZM123.554 6.77182C123.62 6.72246 123.715 6.76262 123.725 6.84425L125.213 6.6582C125.06 5.43373 123.641 4.83142 122.654 5.57182L123.554 6.77182ZM130.002 13.9116L130.382 13.4604L129.235 12.4942L128.855 12.9454L130.002 13.9116ZM129.386 10.8349L127.82 10.6059L127.603 12.09L129.169 12.3191L129.386 10.8349ZM126.451 11.0596L125.47 12.041L126.53 13.1017L127.512 12.1203L126.451 11.0596ZM127.82 10.6059C127.318 10.5323 126.81 10.7006 126.451 11.0596L127.512 12.1203C127.536 12.0964 127.57 12.0851 127.603 12.09L127.82 10.6059ZM130.382 13.4604C131.194 12.497 130.632 11.0173 129.386 10.8349L129.169 12.3191C129.252 12.3313 129.289 12.4299 129.235 12.4942L130.382 13.4604Z"
+                                fill="#939393" />
+                        </svg>
+                    </div>
+                    <div class="flex max-h-[42px] h-full justify-evenly pl-[16px] gap-[8px]">
+                        <div class="my-auto"><i
+                                class="fa-solid fa-phone-volume w-[22px] text-[22px] leading-[22px]"></i>
+                        </div>
+                        <div class="">
+                            <h1 class="font-[Lato] font-[400] text-[18px] leading-[27px]">(406) 555-0120</h1>
+                            <p class="font-[Lato] font-[400] text-[10px] leading-[15px]">Mon - Fri: 9:00-20:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- large screen navbar -->
+            <div class="max-lg:absolute max-lg:-left-[150%] transition-all duration-300 max-lg:w-full">
+                <section class="relative max-w-[1170px] mx-auto 2xl:h-[95px] flex justify-between items-center 
+            max-lg:flex-col max-lg:justify-center max-lg:gap-4 max-lg:py-4 ">
+                    <!-- logo -->
+                    <div class="max-w-[101px] max-h-[63px]">
+                        <img src="./images/logo.PNG" alt="Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div
+                        class="max-w-[401px] w-full border-1 py-[10px] pl-[13px] py-[10px] flex max-md:flex-col max-md:gap-4">
+                        <div
+                            class="max-w-[140px] max-h-[24px] w-full h-full px-[10px] py-[10px] flex justify-center items-center">
+                            <form action="" class="inline-block">
+                                <select name="catgories" id="categories"
+                                    class="pr-[15.08px] leading-[21px] font-[700] font-[Quicksand] text-[14px]">
+                                    <option selected disabled class="mr-8">All Categories</option>
+                                    <option value="abc">abc</option>
+                                    <option value="abc">abc</option>
+                                    <option value="abc">abc</option>
+                                    <option value="abc">abc</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="leading-[24px]">
+                            <form action="">
+                                <input type="text"
+                                    class="border-l-[1px] max-md:border-none pl-4 focus:outline-none focus:border-b focus:border-l-[0px] placeholder:text-gray-400"
+                                    placeholder="Search...">
+                                <i
+                                    class="fa-solid fa-magnifying-glass text-[24px] leading-[24px] w-[24px] opacity-50"></i>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- All categories -->
+                    <div
+                        class="max-w-[180px] max-h-[44px] w-full h-full border-1 px-[10px] py-[10px] flex justify-center items-center">
+                        <span class="material-symbols-outlined w-[24px] text-[24px] inline-block leading-[24px]">
+                            apps
+                        </span>
+                        <form action="" class="inline-block">
+                            <select name="catgories" id="categories"
+                                class="pr-[15.08px] leading-[21px] font-[700] font-[Quicksand] text-[14px]">
+                                <option selected disabled class="mr-8">All Categories</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                                <option value="abc">abc</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="max-w-[264px] max-h-[24px] w-full h-full flex justify-between">
+                        <div class="flex">
+                            <div class="w-[28px] h-[24px] relative ">
+                                <div
+                                    class="w-[16px] h-[16px] rounded-full bg-black text-white flex justify-center items-center absolute -top-2 right-0">
+                                    1</div>
+                                <span
+                                    class="material-symbols-outlined text-[24px] w-[24px] inline-block leading-[24px]">
+                                    favorite
+                                </span>
+                            </div>
+                            <div class="font-[Quicksand] font-[400] text-[16px] leading-[24px]">WishList</div>
+                        </div>
+                        <div class="flex">
+                            <div class="w-[28px] h-[24px] relative ">
+                                <div
+                                    class="w-[16px] h-[16px] rounded-full bg-black text-white flex justify-center items-center absolute -top-2 right-0">
+                                    1</div>
+                                <span
+                                    class="material-symbols-outlined text-[24px] w-[24px] inline-block leading-[24px]">
+                                    shopping_cart
+                                </span>
+                            </div>
+                            <div class="font-[Quicksand] font-[400] text-[16px] leading-[24px]">Cart</div>
+                        </div>
+                        <div class="flex">
+                            <div class="w-[28px] h-[24px]">
+                                <i class="fa-regular fa-user text-[24px] w-[24px] inline-block leading-[24px]"></i>
+                            </div>
+                            <div class="font-[Quicksand] font-[400] text-[16px] leading-[24px]">Account</div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </header>
+    <header class="w-full max-lg:hidden">
+        <section
+            class="max-w-[1170px] mx-auto 2xl:h-[80px] flex items-center max-2xl:justify-between 2xl:gap-[67.58px] max-lg:flex-col max-lg:justify-center max-lg:gap-4 max-lg:py-4">
+            <!-- <section class="max-w-[1170px] mx-auto 2xl:h-[80px] bg-red-200 flex items-center justify-between"> -->
+            <div class="max-w-[268.42px] max-h-[48px] w-full h-full">
+                <div
+                    class="max-w-[268.42px] max-h-[48px] w-full h-full border-1 px-[10px] py-[10px] flex justify-center items-center bg-black text-white">
+                    <span class="material-symbols-outlined w-[24px] text-[24px] inline-block leading-[24px]">
+                        apps
+                    </span>
+                    <form action="" class="inline-block">
+                        <span class="font-[Quicksand] font-[700] text-[16px] leading-[24px]">Browse</span>
+                        <select name="catgories" id="categories"
+                            class="pr-[15.08px] leading-[21px] font-[700] font-[Quicksand] text-[14px]">
+                            <option selected disabled class="mr-8">All Categories</option>
+                            <option value="abc">abc</option>
+                            <option value="abc">abc</option>
+                            <option value="abc">abc</option>
+                            <option value="abc">abc</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <nav
+                class="max-md:flex-wrap max-md:gap-4 max-w-[370.86px] max-h-[45px] w-full h-full flex justify-between items-center">
+                <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Home</a>
+                <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">About</a>
+                <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Shop</a>
+                <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Blog</a>
+                <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Our Team</a>
+                <a href="#" class="block font-[Quicksand] font-[700] text-[14px] leading-[21px]">Contact</a>
+            </nav>
+            <div class="flex w-fit h-full items-center max-md:flex-col">
+                <div class="pr-[16px]">
+                    <svg width="140" height="20" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0001 18.5713C9.26627 18.5713 5.42871 14.7338 5.42871 9.9999C5.42871 5.26603 9.26627 1.42847 14.0001 1.42847C18.734 1.42847 22.5715 5.26603 22.5715 9.9999C22.5715 14.7338 18.734 18.5713 14.0001 18.5713ZM14.0001 18.5713V8.28562C14.0001 7.33884 14.7676 6.57133 15.7144 6.57133H17.0001M11.0001 11.7142H17.0001"
+                            stroke="#939393" stroke-width="1.5" />
+                        <path
+                            d="M50.5447 2.71439L51.293 2.66477C51.2731 2.36392 51.0749 2.10426 50.79 2.00564C50.505 1.90702 50.1887 1.98862 49.9871 2.21278L50.5447 2.71439ZM50.0721 6.33754C50.0721 5.92332 49.7363 5.58754 49.3221 5.58754C48.9079 5.58754 48.5721 5.92332 48.5721 6.33754H50.0721ZM41.9997 7.42868V8.17868H42.7497V7.42868H41.9997ZM34.6509 2.71439L35.3533 2.4514C35.2486 2.1719 34.9882 1.98104 34.6902 1.96541C34.3921 1.94979 34.1132 2.11237 33.9799 2.37939L34.6509 2.71439ZM39.4283 13.8572L39.959 14.3872C40.1426 14.2033 40.2179 13.9376 40.1582 13.6848C40.0985 13.432 39.9122 13.2281 39.6658 13.1458L39.4283 13.8572ZM33.4283 16.1838V15.4338C33.0979 15.4338 32.8064 15.65 32.7105 15.9662C32.6147 16.2824 32.737 16.624 33.0118 16.8075L33.4283 16.1838ZM48.3867 3.90628L47.8304 4.4093L48.1006 4.70816L48.499 4.64783L48.3867 3.90628ZM49.7963 2.764C49.859 3.70949 49.7994 4.26567 49.6543 4.67473C49.5147 5.06811 49.2704 5.39861 48.8032 5.84634L49.841 6.92938C50.384 6.40902 50.8162 5.88596 51.068 5.17622C51.3142 4.48215 51.3607 3.68564 51.293 2.66477L49.7963 2.764ZM50.0721 7.22969V6.38786H48.5721V7.22969H50.0721ZM50.0721 6.38786V6.33754H48.5721V6.38786H50.0721ZM41.2497 6.57153V7.42868H42.7497V6.57153H41.2497ZM45.7045 1.96438C43.1987 1.96438 41.2497 4.13995 41.2497 6.57153H42.7497C42.7497 4.88993 44.1035 3.46439 45.7045 3.46439V1.96438ZM48.5721 7.22969C48.5721 12.4517 44.1836 16.9644 38.9997 16.9644V18.4644C45.0413 18.4644 50.0721 13.2506 50.0721 7.22969H48.5721ZM33.9485 2.97738C34.6374 4.81735 37.2031 8.17868 41.9997 8.17868V6.67868C37.9936 6.67868 35.8869 3.87673 35.3533 2.4514L33.9485 2.97738ZM33.9799 2.37939C32.6866 4.96989 32.4505 7.52848 33.3675 9.72295C34.2845 11.9174 36.2934 13.6014 39.1908 14.5686L39.6658 13.1458C37.0614 12.2764 35.4591 10.8379 34.7515 9.14461C34.0439 7.45131 34.17 5.35685 35.3219 3.04939L33.9799 2.37939ZM38.8975 13.3273C38.1893 14.0367 36.1201 15.4338 33.4283 15.4338V16.9338C36.605 16.9338 39.0372 15.3104 39.959 14.3872L38.8975 13.3273ZM48.943 3.40327C48.145 2.52076 46.9893 1.96438 45.7045 1.96438V3.46439C46.5473 3.46439 47.3045 3.82772 47.8304 4.4093L48.943 3.40327ZM48.499 4.64783C49.463 4.50183 50.4001 3.99645 51.1022 3.21599L49.9871 2.21278C49.5082 2.74515 48.8817 3.07277 48.2744 3.16474L48.499 4.64783ZM33.0118 16.8075C35.0081 18.1404 36.9311 18.4644 38.9997 18.4644V16.9644C37.1171 16.9644 35.5163 16.6761 33.8448 15.56L33.0118 16.8075Z"
+                            fill="#939393" />
+                        <path
+                            d="M74.7144 5.71419H75.5715M64.8573 1.42847H75.143C77.0365 1.42847 78.5715 2.9635 78.5715 4.85704V15.1428C78.5715 17.0363 77.0365 18.5713 75.143 18.5713H64.8573C62.9637 18.5713 61.4287 17.0363 61.4287 15.1428V4.85704C61.4287 2.9635 62.9637 1.42847 64.8573 1.42847ZM70.0001 13.4285C68.1066 13.4285 66.5716 11.8934 66.5716 9.9999C66.5716 8.10635 68.1066 6.57133 70.0001 6.57133C71.8936 6.57133 73.4287 8.10635 73.4287 9.9999C73.4287 11.8934 71.8936 13.4285 70.0001 13.4285Z"
+                            stroke="#939393" stroke-width="1.5" />
+                        <path
+                            d="M89.4287 14.5131V5.51346C89.4287 4.70203 89.9955 4.00086 90.789 3.83085C95.5425 2.81224 100.458 2.81224 105.211 3.83085C106.005 4.00086 106.572 4.70203 106.572 5.51346V14.5131C106.572 15.3776 105.961 16.1219 105.114 16.2915C100.418 17.2306 95.5825 17.2306 90.8866 16.2915C90.0389 16.1219 89.4287 15.3776 89.4287 14.5131Z"
+                            stroke="#939393" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M96.2852 12.5713V7.42847L100.571 9.9999L96.2852 12.5713Z" stroke="#939393"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M119.143 15.1433L119.814 15.4787L120.021 15.0637L119.742 14.6928L119.143 15.1433ZM120.857 16.8573L121.307 16.2577L120.936 15.979L120.521 16.1865L120.857 16.8573ZM117.429 18.5713L116.758 18.2359C116.614 18.5247 116.67 18.8734 116.898 19.1017C117.127 19.3299 117.475 19.3865 117.764 19.2422L117.429 18.5713ZM122.572 6.57133L122.122 5.97133C121.933 6.11297 121.822 6.33526 121.822 6.57133H122.572ZM129.429 13.4285V14.1785C129.65 14.1785 129.86 14.0808 130.002 13.9116L129.429 13.4285ZM116.679 9.99989C116.679 12.0977 117.373 14.0357 118.543 15.5937L119.742 14.6928C118.76 13.3856 118.179 11.7617 118.179 9.99989H116.679ZM126 0.678467C120.852 0.678467 116.679 4.85181 116.679 9.99989H118.179C118.179 5.68024 121.681 2.17846 126 2.17846V0.678467ZM135.322 9.99989C135.322 4.85181 131.148 0.678467 126 0.678467V2.17846C130.32 2.17846 133.822 5.68024 133.822 9.99989H135.322ZM126 19.3213C131.148 19.3213 135.322 15.148 135.322 9.99989H133.822C133.822 14.3196 130.32 17.8213 126 17.8213V19.3213ZM120.406 17.4569C121.964 18.6274 123.902 19.3213 126 19.3213V17.8213C124.238 17.8213 122.615 17.2397 121.307 16.2577L120.406 17.4569ZM117.764 19.2422L121.192 17.5281L120.521 16.1865L117.093 17.9005L117.764 19.2422ZM118.472 14.8078L116.758 18.2359L118.1 18.9067L119.814 15.4787L118.472 14.8078ZM121.822 6.57133V7.42847H123.322V6.57133H121.822ZM128.572 14.1785H129.429V12.6785H128.572V14.1785ZM121.822 7.42847C121.822 11.1564 124.844 14.1785 128.572 14.1785V12.6785C125.672 12.6785 123.322 10.328 123.322 7.42847H121.822ZM123.022 7.17133L123.554 6.77182L122.654 5.57182L122.122 5.97133L123.022 7.17133ZM123.725 6.84425L123.918 8.39124L125.407 8.20518L125.213 6.6582L123.725 6.84425ZM123.888 8.48029L122.898 9.46957L123.959 10.5302L124.948 9.54095L123.888 8.48029ZM123.918 8.39124C123.922 8.42404 123.911 8.45691 123.888 8.48029L124.948 9.54095C125.299 9.19026 125.468 8.6973 125.407 8.20518L123.918 8.39124ZM123.554 6.77182C123.62 6.72246 123.715 6.76262 123.725 6.84425L125.213 6.6582C125.06 5.43373 123.641 4.83142 122.654 5.57182L123.554 6.77182ZM130.002 13.9116L130.382 13.4604L129.235 12.4942L128.855 12.9454L130.002 13.9116ZM129.386 10.8349L127.82 10.6059L127.603 12.09L129.169 12.3191L129.386 10.8349ZM126.451 11.0596L125.47 12.041L126.53 13.1017L127.512 12.1203L126.451 11.0596ZM127.82 10.6059C127.318 10.5323 126.81 10.7006 126.451 11.0596L127.512 12.1203C127.536 12.0964 127.57 12.0851 127.603 12.09L127.82 10.6059ZM130.382 13.4604C131.194 12.497 130.632 11.0173 129.386 10.8349L129.169 12.3191C129.252 12.3313 129.289 12.4299 129.235 12.4942L130.382 13.4604Z"
+                            fill="#939393" />
+                    </svg>
+                </div>
+                <div class="flex max-h-[42px] h-full justify-evenly border-l-1 max-md:border-none pl-[16px] gap-[8px]">
+                    <div class="my-auto"><i class="fa-solid fa-phone-volume w-[22px] text-[22px] leading-[22px]"></i>
+                    </div>
+                    <div class="">
+                        <h1 class="font-[Lato] font-[400] text-[18px] leading-[27px]">(406) 555-0120</h1>
+                        <p class="font-[Lato] font-[400] text-[10px] leading-[15px]">Mon - Fri: 9:00-20:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="w-full mt-[70.18px] mb-[69.84px]">
+            <div class="max-w-[1170px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[74.51px]">
+                <div class="max-h-[400.69px] min-w-0">
+                    <div class="swiper detailSwiper w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/product1.png" alt="Product1"
+                                    class="max-h-[400.69px] w-full object-contain">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/product2.png" alt="Product2"
+                                    class="max-h-[400.69px] w-full object-contain">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/product3.png" alt="Product3"
+                                    class="max-h-[400.69px] w-full object-contain">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="max-h-[400.69px]">
+                    <h1 class="font-[Quicksand] font-[700] text-[22.49px] leading-[33.74px]">Chelated Oral Calcium</h1>
+                    <p class="mb-[15.47px]">
+                        <i
+                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                        <i
+                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                        <i
+                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                        <i
+                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                        <i
+                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                        <span class="ml-[4px]">(5.0)</span>
+                    </p>
+                    <h1 class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[8.23px]">Price for 1kg
+                    </h1>
+                    <div class="flex py-[2.81px] mb-[23.9px] items-center gap-2">
+                        <div class="font-[Quicksand] font-[600] text-[29.52px] leading-[44.29px]">$24.00</div>
+                        <div class="flex flex-col">
+                            <h1 class="font-[Lato] font-[400] text-[8.44px] leading-[12.65px]">20 % OFF</h1>
+                            <del class="font-[Lato] font-[400] text-[14.06px] leading-[21.09px]">$30.00</del>
+                        </div>
+                    </div>
+                    <div class="font-[Lato] font-[400] text-[12.65px] leading-[14.76px] mb-[27.64px]">
+                        Liquid Nutritional Supplement of High Bio-available Calcium, Phosphorus and Vitamins
+                    </div>
+                    <div class="mb-[31.16px]">
+                        <ul class="list-disc ml-4">
+                            <li class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px]">Fortified with Milk
+                                Enhancing Herb Extracts</li>
+                            <li class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px]">Colour : Erythrosine</li>
+                        </ul>
+                    </div>
+                    <div class="flex gap-[14.06px] py-[7.03px]">
+                        <div
+                            class="py-[8.44px] px-[7.73px] w-fit border-1 font-[Quicksand] font-[700] text-[9.84px] leading-[14.76px] rounded-sm">
+                            <span>Quantity: 1</span>
+                            <i class="fa-solid fa-angle-up"></i>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div
+                            class="py-[8.44px] px-[7.73px] border-1 font-[Quicksand] font-[700] text-[9.84px] leading-[14.76px] rounded-sm">
+                            Size/weight:150g
+                        </div>
+                    </div>
+                    <div class="flex gap-[8.44px]">
+                        <div class="py-[9.14px] px-[15.11px] border-1 rounded-sm">
+                            <i class="fa-solid fa-heart text-[13px] text-[#F74B81]"></i>
+                        </div>
+                        <div class="py-[9.14px] px-[15.11px] border-1 rounded-sm">
+                            <i class="fa-solid fa-up-down text-[13px]"></i>
+                        </div>
+                        <div
+                            class="py-[9.14px] px-[15.11px] border-1 rounded-sm text-white bg-black font-[Quicksand] font-[700 text-middle]">
+                            Buy now
+                        </div>
+                        <div
+                            class="px-[15.11px] py-[9.14px] bg-[#F2F0F0] rounded-sm flex justify-center items-center font-[Quicksand] font-[700] text-[9.84px] leading-[14.67px] text-middle">
+                            <span class="material-symbols-outlined text-[24px] w-[24px] inline-block leading-[24px]">
+                                shopping_cart
+                            </span>
+                            Add to Cart
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mb-[44.88px]">
+            <div class="max-w-[1170px] mx-auto">
+                <div class="flex gap-[8.44px]">
+                    <div
+                        class="py-[5px] px-[15px] font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] border-1 rounded-t-md">
+                        Description</div>
+                    <div
+                        class="py-[5px] px-[15px] font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] border-1 rounded-t-md">
+                        Reviews <span class="px-[2px] py-[2px] rounded-full bg-[#F2F0F0] ml-2">12</span></div>
+                </div>
+                <div class="border-1 py-[22.7px] px-[14.06px]">
+                    <h1 class="font-[Quicksand] font-[700] text-[14.06px] leading-[17.57px] mb-[16.45px]"></h1>
+                    <ul class="list-disc ml-4 mb-[25.57px]">
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Calcium 60000 mg</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Phosphorus 30000</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Vitamin D3 15000</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Vitamin B12 1500</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Vitamin H 1000 m</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Cobalt 500 mg</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Tricholine Citra</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Leptadenia retic</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Asparagus racemo</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Magnesium sulpha</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Chromium 4200 mc</li>
+                        <li class="font-[Quicksand] font-[400] text-[14.06px] leading-[21.09px]">Zinc MHA 50 mg</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mb-[26px]">
+            <div class="max-w-[1170px] mx-auto">
+                <div class="flex justify-between mb-[16.87px]">
+                    <h1 class="font-[Quicksand] font-[600] text-[29.52px] leading-[44.29px]">Related Products</h1>
+                    <!-- arrows -->
+                    <div class="flex gap-4 justify-end mb-[36px]">
+                        <div
+                            class="prev-product w-8 h-8 rounded-full p-2 flex justify-center items-center bg-black cursor-pointer ">
+                            <i class="text-white fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div
+                            class="next-product w-8 h-8 rounded-full p-2 flex justify-center items-center bg-black cursor-pointer ">
+                            <i class="text-white fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- swiper products -->
+                <div class="min-w-0 p-[11.25px]">
+                    <div class="swiper productSwiper w-full h-[393.66px] border-1 rounded-md">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related1.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Dhara</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related1.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Dhara</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related1.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Dhara</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related1.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Dhara</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related1.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Dhara</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related2.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Gel</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related3.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        5 Star Min</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-md h-[393.66px] w-full border-1 overflow-hidden">
+                                <div class="flex justify-between">
+                                    <h1
+                                        class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                        Sale</h1>
+                                    <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                                </div>
+                                <div class="max-h-[183.47px]">
+                                    <img src="./images/related4.png" alt="product1"
+                                        class="w-full max-h-[183.47px] object-contain">
+                                </div>
+                                <div class="pl-4">
+                                    <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                                    </h3>
+                                    <h1
+                                        class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                        Star H Vitamin H</h1>
+                                    <p class="mb-[8.09px]">
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <i
+                                            class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                        <span class="ml-[4px]">5</span>
+                                    </p>
+                                    <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                        per kg</p>
+                                    <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                        <span class="mr-2">$24.00</span><del>$30.00</del>
+                                    </h1>
+                                    <button
+                                        class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                        <span class="material-symbols-outlined mr-2">
+                                            shopping_cart
+                                        </span> Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-pagination-product"></div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full">
+            <div class="max-w-[1170px] mx-auto">
+                <h1 class="mb-[16.87px] font-[Quicksand] font-[600] text-[29.52px] leading-[44.29px]">Promotional Goods
+                </h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]">
+                    <div class="border-1 rounded-md overflow-hidden pb-4">
+                        <div class="flex justify-between">
+                            <h1
+                                class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                Sale</h1>
+                            <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                        </div>
+                        <div class="max-h-[183.47px]">
+                            <img src="./images/promotional1.png" alt="product1"
+                                class="w-full max-h-[183.47px] object-contain">
+                        </div>
+                        <div class="pl-4">
+                            <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                            </h3>
+                            <h1 class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                Star H Vitamin H</h1>
+                            <p class="mb-[8.09px]">
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <span class="ml-[4px]">5</span>
+                            </p>
+                            <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                per kg</p>
+                            <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                <span class="mr-2">$24.00</span><del>$30.00</del>
+                            </h1>
+                            <button
+                                class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                <span class="material-symbols-outlined mr-2">
+                                    shopping_cart
+                                </span> Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border-1 rounded-md overflow-hidden pb-4">
+                        <div class="flex justify-between">
+                            <h1
+                                class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                Sale</h1>
+                            <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                        </div>
+                        <div class="max-h-[183.47px]">
+                            <img src="./images/promotional2.png" alt="product1"
+                                class="w-full max-h-[183.47px] object-contain">
+                        </div>
+                        <div class="pl-4">
+                            <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                            </h3>
+                            <h1 class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                Star H Vitamin H</h1>
+                            <p class="mb-[8.09px]">
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <span class="ml-[4px]">5</span>
+                            </p>
+                            <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                per kg</p>
+                            <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                <span class="mr-2">$24.00</span><del>$30.00</del>
+                            </h1>
+                            <button
+                                class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                <span class="material-symbols-outlined mr-2">
+                                    shopping_cart
+                                </span> Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border-1 rounded-md overflow-hidden pb-4">
+                        <div class="flex justify-between">
+                            <h1
+                                class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                Sale</h1>
+                            <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                        </div>
+                        <div class="max-h-[183.47px]">
+                            <img src="./images/promotional3.png" alt="product1"
+                                class="w-full max-h-[183.47px] object-contain">
+                        </div>
+                        <div class="pl-4">
+                            <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                            </h3>
+                            <h1 class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                Star H Vitamin H</h1>
+                            <p class="mb-[8.09px]">
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <span class="ml-[4px]">5</span>
+                            </p>
+                            <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                per kg</p>
+                            <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                <span class="mr-2">$24.00</span><del>$30.00</del>
+                            </h1>
+                            <button
+                                class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                <span class="material-symbols-outlined mr-2">
+                                    shopping_cart
+                                </span> Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border-1 rounded-md overflow-hidden pb-4">
+                        <div class="flex justify-between">
+                            <h1
+                                class="font-[Quicksand] text-white justify-center mt-2 -ml-[28.95px] -rotate-36 w-[105.24px] h-[25.3px] flex items-center bg-[#FF0532]">
+                                Sale</h1>
+                            <i class="fa-solid fa-heart text-2xl text-[#F74B81] block mt-2 mr-2"></i>
+
+                        </div>
+                        <div class="max-h-[183.47px]">
+                            <img src="./images/promotional4.png" alt="product1"
+                                class="w-full max-h-[183.47px] object-contain">
+                        </div>
+                        <div class="pl-4">
+                            <h3 class="font-[Quicksand] font-[400] text-[9.84px] leading-[14.76px]">Category
+                            </h3>
+                            <h1 class="font-[Quicksand] font-[700] text-[14.06px] leading-[21.09px] mb-[7.43px]">
+                                Star H Vitamin H</h1>
+                            <p class="mb-[8.09px]">
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <i
+                                    class="fa-solid fa-star text-[#FFD700] font-[400] text-[16.87px] leading-[25.31px] w-[26px] inline-block text-center"></i>
+                                <span class="ml-[4px]">5</span>
+                            </p>
+                            <p class="font-[Lato] font-[400] text-[9.84px] leading-[14.76px] mb-[8.13px]">Price
+                                per kg</p>
+                            <h1 class="font-[Lato] font-[400] text-[11.25px] leading-[16.87px] mb-[8.37px]">
+                                <span class="mr-2">$24.00</span><del>$30.00</del>
+                            </h1>
+                            <button
+                                class="py-[8.08px] max-w-[90%] w-full text-white flex items-center justify-center font-[Quicksand] text-[9.84px] leading-[14.76px] bg-black rounded-sm">
+                                <span class="material-symbols-outlined mr-2">
+                                    shopping_cart
+                                </span> Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full lg:h-[530px] pt-[60px]">
+        <div class="max-w-[1170px] mx-auto h-full flex max-lg:flex-col max-lg:gap-8">
+            <!-- left side -->
+            <!-- <div class="lg:max-w-[351px] w-full h-full border-1"> -->
+            <div class="lg:max-w-[351px] w-full h-full flex flex-col max-sm:items-center">
+                <div class="max-w-[101px] max-h-[63px] h-full mb-[37px] max-sm:mx-auto">
+                    <img src="./images/logo.PNG" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                <div class="mb-[30px] max-sm:max-w-[300px] max-sm:w-full">
+                    <svg width="140" height="20" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_3094)">
+                            <path
+                                d="M14.0001 18.5715C9.26627 18.5715 5.42871 14.734 5.42871 10.0001C5.42871 5.26627 9.26627 1.42871 14.0001 1.42871C18.734 1.42871 22.5715 5.26627 22.5715 10.0001C22.5715 14.734 18.734 18.5715 14.0001 18.5715ZM14.0001 18.5715V8.28586C14.0001 7.33908 14.7676 6.57157 15.7144 6.57157H17.0001M11.0001 11.7144H17.0001"
+                                stroke="#939393" stroke-width="1.5" />
+                        </g>
+                        <path
+                            d="M50.5447 2.71439L51.293 2.66477C51.2731 2.36392 51.0749 2.10426 50.79 2.00564C50.505 1.90702 50.1887 1.98862 49.9871 2.21278L50.5447 2.71439ZM50.0721 6.33754C50.0721 5.92332 49.7363 5.58754 49.3221 5.58754C48.9079 5.58754 48.5721 5.92332 48.5721 6.33754H50.0721ZM41.9997 7.42868V8.17868H42.7497V7.42868H41.9997ZM34.6509 2.71439L35.3533 2.4514C35.2486 2.1719 34.9882 1.98104 34.6902 1.96541C34.3921 1.94979 34.1132 2.11237 33.9799 2.37939L34.6509 2.71439ZM39.4283 13.8572L39.959 14.3872C40.1426 14.2033 40.2179 13.9376 40.1582 13.6848C40.0985 13.432 39.9122 13.2281 39.6658 13.1458L39.4283 13.8572ZM33.4283 16.1838V15.4338C33.0979 15.4338 32.8064 15.65 32.7105 15.9662C32.6147 16.2824 32.737 16.624 33.0118 16.8075L33.4283 16.1838ZM48.3867 3.90628L47.8304 4.4093L48.1006 4.70816L48.499 4.64783L48.3867 3.90628ZM49.7963 2.764C49.859 3.70949 49.7994 4.26567 49.6543 4.67473C49.5147 5.06811 49.2704 5.39861 48.8032 5.84634L49.841 6.92938C50.384 6.40902 50.8162 5.88596 51.068 5.17622C51.3142 4.48215 51.3607 3.68564 51.293 2.66477L49.7963 2.764ZM50.0721 7.22969V6.38786H48.5721V7.22969H50.0721ZM50.0721 6.38786V6.33754H48.5721V6.38786H50.0721ZM41.2497 6.57153V7.42868H42.7497V6.57153H41.2497ZM45.7045 1.96438C43.1987 1.96438 41.2497 4.13995 41.2497 6.57153H42.7497C42.7497 4.88993 44.1035 3.46439 45.7045 3.46439V1.96438ZM48.5721 7.22969C48.5721 12.4517 44.1836 16.9644 38.9997 16.9644V18.4644C45.0413 18.4644 50.0721 13.2506 50.0721 7.22969H48.5721ZM33.9485 2.97738C34.6374 4.81735 37.2031 8.17868 41.9997 8.17868V6.67868C37.9936 6.67868 35.8869 3.87673 35.3533 2.4514L33.9485 2.97738ZM33.9799 2.37939C32.6866 4.96989 32.4505 7.52848 33.3675 9.72295C34.2845 11.9174 36.2934 13.6014 39.1908 14.5686L39.6658 13.1458C37.0614 12.2764 35.4591 10.8379 34.7515 9.14461C34.0439 7.45131 34.17 5.35685 35.3219 3.04939L33.9799 2.37939ZM38.8975 13.3273C38.1893 14.0367 36.1201 15.4338 33.4283 15.4338V16.9338C36.605 16.9338 39.0372 15.3104 39.959 14.3872L38.8975 13.3273ZM48.943 3.40327C48.145 2.52076 46.9893 1.96438 45.7045 1.96438V3.46439C46.5473 3.46439 47.3045 3.82772 47.8304 4.4093L48.943 3.40327ZM48.499 4.64783C49.463 4.50183 50.4001 3.99645 51.1022 3.21599L49.9871 2.21278C49.5082 2.74515 48.8817 3.07277 48.2744 3.16474L48.499 4.64783ZM33.0118 16.8075C35.0081 18.1404 36.9311 18.4644 38.9997 18.4644V16.9644C37.1171 16.9644 35.5163 16.6761 33.8448 15.56L33.0118 16.8075Z"
+                            fill="#939393" />
+                        <g clip-path="url(#clip1_1_3094)">
+                            <path
+                                d="M74.7144 5.71443H75.5715M64.8573 1.42871H75.143C77.0365 1.42871 78.5715 2.96374 78.5715 4.85728V15.143C78.5715 17.0365 77.0365 18.5715 75.143 18.5715H64.8573C62.9637 18.5715 61.4287 17.0365 61.4287 15.143V4.85728C61.4287 2.96374 62.9637 1.42871 64.8573 1.42871ZM70.0001 13.4287C68.1066 13.4287 66.5716 11.8936 66.5716 10.0001C66.5716 8.10659 68.1066 6.57157 70.0001 6.57157C71.8936 6.57157 73.4287 8.10659 73.4287 10.0001C73.4287 11.8936 71.8936 13.4287 70.0001 13.4287Z"
+                                stroke="#939393" stroke-width="1.5" />
+                        </g>
+                        <path
+                            d="M89.4287 14.5131V5.51346C89.4287 4.70203 89.9955 4.00086 90.789 3.83085C95.5425 2.81224 100.458 2.81224 105.211 3.83085C106.005 4.00086 106.572 4.70203 106.572 5.51346V14.5131C106.572 15.3776 105.961 16.1219 105.114 16.2915C100.418 17.2306 95.5825 17.2306 90.8866 16.2915C90.0389 16.1219 89.4287 15.3776 89.4287 14.5131Z"
+                            stroke="#939393" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M96.2856 12.5716V7.42871L100.571 10.0001L96.2856 12.5716Z" stroke="#939393"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                        <g clip-path="url(#clip2_1_3094)">
+                            <path
+                                d="M119.142 15.1435L119.813 15.4789L120.021 15.0639L119.742 14.693L119.142 15.1435ZM120.856 16.8575L121.307 16.2579L120.936 15.9792L120.521 16.1867L120.856 16.8575ZM117.428 18.5715L116.757 18.2361C116.613 18.5249 116.67 18.8736 116.898 19.1019C117.126 19.3301 117.475 19.3867 117.764 19.2424L117.428 18.5715ZM122.571 6.57158L122.121 5.97158C121.932 6.11322 121.821 6.33551 121.821 6.57158H122.571ZM129.428 13.4287V14.1787C129.649 14.1787 129.859 14.081 130.002 13.9118L129.428 13.4287ZM116.678 10.0001C116.678 12.0979 117.372 14.0359 118.543 15.5939L119.742 14.693C118.76 13.3858 118.178 11.7619 118.178 10.0001H116.678ZM126 0.678711C120.852 0.678711 116.678 4.85206 116.678 10.0001H118.178C118.178 5.68049 121.68 2.17871 126 2.17871V0.678711ZM135.321 10.0001C135.321 4.85206 131.148 0.678711 126 0.678711V2.17871C130.319 2.17871 133.821 5.68049 133.821 10.0001H135.321ZM126 19.3215C131.148 19.3215 135.321 15.1482 135.321 10.0001H133.821C133.821 14.3198 130.319 17.8215 126 17.8215V19.3215ZM120.406 17.4571C121.964 18.6276 123.902 19.3215 126 19.3215V17.8215C124.238 17.8215 122.614 17.2399 121.307 16.2579L120.406 17.4571ZM117.764 19.2424L121.192 17.5283L120.521 16.1867L117.093 17.9007L117.764 19.2424ZM118.471 14.808L116.757 18.2361L118.099 18.9069L119.813 15.4789L118.471 14.808ZM121.821 6.57158V7.42872H123.321V6.57158H121.821ZM128.571 14.1787H129.428V12.6787H128.571V14.1787ZM121.821 7.42872C121.821 11.1566 124.843 14.1787 128.571 14.1787V12.6787C125.672 12.6787 123.321 10.3282 123.321 7.42872H121.821ZM123.021 7.17158L123.554 6.77207L122.654 5.57207L122.121 5.97158L123.021 7.17158ZM123.724 6.8445L123.918 8.39149L125.406 8.20543L125.213 6.65845L123.724 6.8445ZM123.887 8.48054L122.898 9.46982L123.959 10.5304L124.948 9.5412L123.887 8.48054ZM123.918 8.39149C123.922 8.42429 123.911 8.45716 123.887 8.48054L124.948 9.5412C125.299 9.19051 125.468 8.69755 125.406 8.20543L123.918 8.39149ZM123.554 6.77207C123.62 6.72271 123.714 6.76287 123.724 6.8445L125.213 6.65845C125.06 5.43398 123.641 4.83167 122.654 5.57207L123.554 6.77207ZM130.002 13.9118L130.382 13.4606L129.235 12.4944L128.855 12.9456L130.002 13.9118ZM129.385 10.8351L127.82 10.6061L127.603 12.0902L129.168 12.3193L129.385 10.8351ZM126.451 11.0598L125.469 12.0412L126.53 13.1019L127.511 12.1205L126.451 11.0598ZM127.82 10.6061C127.317 10.5325 126.81 10.7008 126.451 11.0598L127.511 12.1205C127.535 12.0966 127.569 12.0853 127.603 12.0902L127.82 10.6061ZM130.382 13.4606C131.193 12.4972 130.631 11.0175 129.385 10.8351L129.168 12.3193C129.251 12.3315 129.289 12.4301 129.235 12.4944L130.382 13.4606Z"
+                                fill="#939393" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_3094">
+                                <rect width="20" height="20" fill="white" transform="translate(4)" />
+                            </clipPath>
+                            <clipPath id="clip1_1_3094">
+                                <rect width="20" height="20" fill="white" transform="translate(60)" />
+                            </clipPath>
+                            <clipPath id="clip2_1_3094">
+                                <rect width="20" height="20" fill="white" transform="translate(116)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div
+                    class="font-[400] font-[Lato] text-[14px] leading-[21px] mb-[25px] max-sm:max-w-[300px] max-sm:w-full">
+                    <i class="fa-solid fa-phone-volume mr-[10px]"></i>(684) 555-0102
+                </div>
+                <div
+                    class="font-[300] font-[Lato] text-[14px] leading-[21px] mb-[25px] max-sm:max-w-[300px] max-sm:w-full">
+                    <i
+                        class="mr-[10px] inline-block fa-regular fa-envelope max-sm:max-w-[300px] max-sm:w-full"></i>name@email.com
+                </div>
+                <div
+                    class="font-[300] font-[Lato] text-[14px] leading-[21px] mb-[25px] max-sm:max-w-[300px] max-sm:w-full">
+                    <i class="mr-[10px] inline-block fa-solid fa-location-dot"></i>6391 Elgin St. Celina,
+                    Delaware 10299
+                </div>
+                <div class="font-[300] font-[Lato] text-[14px] leading-[21px] max-sm:max-w-[300px] max-sm:w-full"><i
+                        class="mr-[10px] inline-block fa-regular fa-alarm-clock"></i>10:00 - 18:00, Mon - Sat
+                </div>
+            </div>
+
+            <!-- right side -->
+            <div class="lg:max-w-[819px] w-full h-full">
+                <!-- Navigations -->
+                <!-- <div class="grid grid-cols-3 max-h-[182px] h-full w-full mb-[40px]"> -->
+                <!-- <div class="grid grid-cols-[repeat(auto-fit,188.36px)] max-h-[182px] h-full w-full mb-[40px] lg:gap-[]"> -->
+                <div
+                    class="flex justify-between lg:max-h-[182px] h-full w-full mb-[40px] max-sm:flex-wrap max-sm:justify-center max-sm:gap-8">
+                    <div class="flex flex-col gap-[10px] max-w-[188.36px] w-full ">
+                        <h1 class="font-[600] font-[Poppins] text-[18px] leading-[27px]">Connections</h1>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">About Us</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Services</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Case Studies</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Blog</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Contact</a>
+                    </div>
+
+                    <div class="flex flex-col gap-[10px] max-w-[188.36px] w-full">
+                        <h1 class="font-[600] font-[Poppins] text-[18px] leading-[27px]">Earnings</h1>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Become an Affliate</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Advertise your product</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Sell on Market</a>
+                    </div>
+                    <div class="flex flex-col gap-[10px] max-w-[188.36px] w-full">
+                        <h1 class="font-[600] font-[Poppins] text-[18px] leading-[27px]">Account</h1>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Become an Affliate</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Advertise your product</a>
+                        <a href="#" class="block font-[Open_Sans] text-[14px] leading-[21px]">Sell on Market</a>
+                    </div>
+                </div>
+
+                <!-- Product tags -->
+                <div class="lg:max-h-[127px] h-full w-full mb-[9px]">
+                    <h1 class="font-[Quicksand] font-[600] text-[18px] leading-[27px]">Product tags</h1>
+                    <div class="flex flex-wrap">
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Beans</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Carrots</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Vaping</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Garlic</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Mushrooms</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            E-liquid</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Chilli peppers</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Brocoli</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            SKE-Vaping</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Cherries</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Vaping</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            SEO tag</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Vaping</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            Seo tag</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            vapping</div>
+                        <div
+                            class="font-[Quicksand] font-[600] text-[12px] leading-[18px] text-center rounded-[12px] bg-[#F2F0F0] my-[12px] mr-[16px] py-[4px] px-[9.67px]">
+                            IVG-vaping</div>
+                    </div>
+                </div>
+                <!-- copyright -->
+                <div
+                    class="flex max-lg:items-center lg:justify-between max-lg:flex-col max-lg:gap-4 pt-[50.5px] pb-[40.5px] lg:max-h-[112px] h-full w-full border-t-1">
+                    <div class="leading-[21px] text-[14px] leading-[21px] font-[Lato] font-[400]">Copyright © 2022
+                        ThemeRage. All Right Reserved.</div>
+                    <div class="">
+                        <div class="flex gap-4 max-lg:flex-col gap-[24px]">
+                            <div class="font-[Lato] font-[400] text-[14px] leading-[21px]"><i
+                                    class="w-[32px] fa-solid fa-phone-volume mr-2"></i>(684) 555-0102</div>
+                            <div class="font-[Lato] font-[400] text-[14px] leading-[21px]"><i
+                                    class="w-[32px] fa-solid fa-phone-volume mr-2"></i>(684) 555-0102</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const nav1Mobile = document.getElementById('nav1Mobile');
+        const cross1 = document.getElementById('cross1');
+        const nav2Mobile = document.getElementById('nav2Mobile');
+        const cross2 = document.getElementById('cross2');
+
+        nav1.addEventListener('click', () => {
+            nav1Mobile.classList.toggle('-left-[150%]');
+            nav1Mobile.classList.toggle('left-0');
+        });
+        cross1.addEventListener('click', () => {
+            nav1Mobile.classList.toggle('-left-[150%]');
+            nav1Mobile.classList.toggle('left-0');
+        });
+
+        nav2.addEventListener('click', () => {
+            nav2Mobile.classList.toggle('-left-[150%]');
+            nav2Mobile.classList.toggle('left-0');
+        });
+        cross2.addEventListener('click', () => {
+            nav2Mobile.classList.toggle('-left-[150%]');
+            nav2Mobile.classList.toggle('left-0');
+        });
+
+        // detailSwiper
+        const detailSwiper = new Swiper('.detailSwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+
+            },
+            autoplay: {
+                delay: 2000,              // time between slides (ms)
+                disableOnInteraction: false, // keeps autoplay even after swipe
+                pauseOnMouseEnter: true,  // optional
+            },
+        });
+
+        const productSwiper = new Swiper('.productSwiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                }
+            },
+            navigation: {
+                nextEl: '.next-product',
+                prevEl: '.prev-product'
+            },
+
+            pagination: {
+                el: '.swiper-pagination-product',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `
+                      <span class="${className} bullet-outer">
+                        <span class="bullet-inner"></span>
+                      </span>
+                    `;
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
